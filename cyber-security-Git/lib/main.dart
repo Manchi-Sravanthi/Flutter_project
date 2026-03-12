@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screens/splash_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/learn_screen.dart';
 import 'screens/survey_screen.dart';
@@ -21,15 +20,15 @@ class CyberSafetyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/splash',
-      routes: {
-        '/splash': (context) => const SplashScreen(),
-        '/home': (context) => const HomeScreen(),
-        '/learn': (context) => const LearnScreen(),
-        '/survey': (context) => const SurveyScreen(),
-        '/spamcheck': (context) => const SpamCheckScreen(),
-        '/survey_results': (context) => const SurveyResultsScreen(),
-      },
+      home: const HomeScreen(),
+
+routes: {
+  '/home': (context) => const HomeScreen(),
+  '/learn': (context) => const LearnScreen(),
+  '/survey': (context) => const SurveyScreen(),
+  '/spamcheck': (context) => const SpamCheckScreen(),
+  '/survey_results': (context) => const SurveyResultsScreen(),
+}
     );
   }
 }
